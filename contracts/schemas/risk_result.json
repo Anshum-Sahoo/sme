@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Risk Result",
+  "type": "object",
+  "properties": {
+    "application_id": { "type": "string" },
+    "overall_score": { "type": "integer", "minimum": 0, "maximum": 100 },
+    "recommended_credit_limit": { "type": "number" },
+    "metrics": {
+      "type": "object",
+      "properties": {
+        "cash_flow_stability": { "type": "integer" },
+        "revenue_stability": { "type": "integer" },
+        "debt_health": { "type": "integer" },
+        "gst_consistency": { "type": "integer" },
+        "transaction_risk": { "type": "integer" }
+      },
+      "required": ["cash_flow_stability", "revenue_stability", "debt_health", "gst_consistency", "transaction_risk"]
+    },
+    "risk_flags": { 
+      "type": "array", 
+      "items": { "type": "string" } 
+    },
+    "explanation": {
+      "type": "array",
+      "items": {
+      "type": "string"
+  }
+}
+  },
+  "required": ["application_id", "overall_score", "recommended_credit_limit", "metrics", "risk_flags", "explanation"]
+}

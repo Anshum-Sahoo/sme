@@ -1,0 +1,445 @@
+[
+  {
+    "transaction_id": "TXN001",
+    "date": "2025-09-03",
+    "description": "Customer Invoice Payment",
+    "amount": 285000,
+    "type": "CREDIT",
+    "balance": 535000,
+    "category": "SALES"
+  },
+  {
+    "transaction_id": "TXN002",
+    "date": "2025-09-08",
+    "description": "Supplier Payment",
+    "amount": 120000,
+    "type": "DEBIT",
+    "balance": 415000,
+    "category": "SUPPLIER"
+  },
+  {
+    "transaction_id": "TXN003",
+    "date": "2025-09-15",
+    "description": "Customer Invoice Payment",
+    "amount": 195000,
+    "type": "CREDIT",
+    "balance": 610000,
+    "category": "SALES"
+  },
+  {
+    "transaction_id": "TXN004",
+    "date": "2025-09-25",
+    "description": "Payroll",
+    "amount": 85000,
+    "type": "DEBIT",
+    "balance": 525000,
+    "category": "PAYROLL"
+  },
+
+  {
+    "transaction_id": "TXN005",
+    "date": "2025-10-04",
+    "description": "Customer Invoice Payment",
+    "amount": 310000,
+    "type": "CREDIT",
+    "balance": 835000,
+    "category": "SALES"
+  },
+  {
+    "transaction_id": "TXN006",
+    "date": "2025-10-10",
+    "description": "Supplier Payment",
+    "amount": 140000,
+    "type": "DEBIT",
+    "balance": 695000,
+    "category": "SUPPLIER"
+  },
+  {
+    "transaction_id": "TXN007",
+    "date": "2025-10-17",
+    "description": "Customer Invoice Payment",
+    "amount": 220000,
+    "type": "CREDIT",
+    "balance": 915000,
+    "category": "SALES"
+  },
+  {
+    "transaction_id": "TXN008",
+    "date": "2025-10-26",
+    "description": "Office Rent",
+    "amount": 45000,
+    "type": "DEBIT",
+    "balance": 870000,
+    "category": "OPERATIONS"
+  },
+
+  {
+    "transaction_id": "TXN009",
+    "date": "2025-11-05",
+    "description": "Customer Invoice Payment",
+    "amount": 295000,
+    "type": "CREDIT",
+    "balance": 1165000,
+    "category": "SALES"
+  },
+  {
+    "transaction_id": "TXN010",
+    "date": "2025-11-11",
+    "description": "Supplier Payment",
+    "amount": 135000,
+    "type": "DEBIT",
+    "balance": 1030000,
+    "category": "SUPPLIER"
+  },
+  {
+    "transaction_id": "TXN011",
+    "date": "2025-11-18",
+    "description": "Customer Invoice Payment",
+    "amount": 240000,
+    "type": "CREDIT",
+    "balance": 1270000,
+    "category": "SALES"
+  },
+  {
+    "transaction_id": "TXN012",
+    "date": "2025-11-27",
+    "description": "Payroll",
+    "amount": 90000,
+    "type": "DEBIT",
+    "balance": 1180000,
+    "category": "PAYROLL"
+  },
+
+  {
+    "transaction_id": "TXN013",
+    "date": "2025-12-03",
+    "description": "Customer Invoice Payment",
+    "amount": 325000,
+    "type": "CREDIT",
+    "balance": 1505000,
+    "category": "SALES"
+  },
+  {
+    "transaction_id": "TXN014",
+    "date": "2025-12-09",
+    "description": "Supplier Payment",
+    "amount": 150000,
+    "type": "DEBIT",
+    "balance": 1355000,
+    "category": "SUPPLIER"
+  },
+  {
+    "transaction_id": "TXN015",
+    "date": "2025-12-16",
+    "description": "Customer Invoice Payment",
+    "amount": 250000,
+    "type": "CREDIT",
+    "balance": 1605000,
+    "category": "SALES"
+  },
+  {
+    "transaction_id": "TXN016",
+    "date": "2025-12-28",
+    "description": "Year End Payroll",
+    "amount": 95000,
+    "type": "DEBIT",
+    "balance": 1510000,
+    "category": "PAYROLL"
+  },
+
+  {
+    "transaction_id": "TXN017",
+    "date": "2026-01-05",
+    "description": "Customer Invoice Payment",
+    "amount": 335000,
+    "type": "CREDIT",
+    "balance": 1845000,
+    "category": "SALES"
+  },
+  {
+    "transaction_id": "TXN018",
+    "date": "2026-01-12",
+    "description": "Supplier Payment",
+    "amount": 155000,
+    "type": "DEBIT",
+    "balance": 1690000,
+    "category": "SUPPLIER"
+  },
+  {
+    "transaction_id": "TXN019",
+    "date": "2026-01-19",
+    "description": "Customer Invoice Payment",
+    "amount": 260000,
+    "type": "CREDIT",
+    "balance": 1950000,
+    "category": "SALES"
+  },
+  {
+    "transaction_id": "TXN020",
+    "date": "2026-01-29",
+    "description": "Office Rent",
+    "amount": 50000,
+    "type": "DEBIT",
+    "balance": 1900000,
+    "category": "OPERATIONS"
+  },
+
+  {
+    "transaction_id": "TXN021",
+    "date": "2026-02-04",
+    "description": "Customer Invoice Payment",
+    "amount": 345000,
+    "type": "CREDIT",
+    "balance": 2245000,
+    "category": "SALES"
+  },
+  {
+    "transaction_id": "TXN022",
+    "date": "2026-02-11",
+    "description": "Supplier Payment",
+    "amount": 160000,
+    "type": "DEBIT",
+    "balance": 2085000,
+    "category": "SUPPLIER"
+  },
+  {
+    "transaction_id": "TXN023",
+    "date": "2026-02-18",
+    "description": "Customer Invoice Payment",
+    "amount": 275000,
+    "type": "CREDIT",
+    "balance": 2360000,
+    "category": "SALES"
+  },
+  {
+    "transaction_id": "TXN024",
+    "date": "2026-02-26",
+    "description": "Payroll",
+    "amount": 98000,
+    "type": "DEBIT",
+    "balance": 2262000,
+    "category": "PAYROLL"
+  },
+
+  {
+    "transaction_id": "TXN025",
+    "date": "2026-03-05",
+    "description": "Customer Invoice Payment",
+    "amount": 350000,
+    "type": "CREDIT",
+    "balance": 2612000,
+    "category": "SALES"
+  },
+  {
+    "transaction_id": "TXN026",
+    "date": "2026-03-13",
+    "description": "Supplier Payment",
+    "amount": 165000,
+    "type": "DEBIT",
+    "balance": 2447000,
+    "category": "SUPPLIER"
+  },
+  {
+    "transaction_id": "TXN027",
+    "date": "2026-03-20",
+    "description": "Customer Invoice Payment",
+    "amount": 280000,
+    "type": "CREDIT",
+    "balance": 2727000,
+    "category": "SALES"
+  },
+  {
+    "transaction_id": "TXN028",
+    "date": "2026-03-28",
+    "description": "Utilities",
+    "amount": 52000,
+    "type": "DEBIT",
+    "balance": 2675000,
+    "category": "OPERATIONS"
+  },
+
+  {
+    "transaction_id": "TXN029",
+    "date": "2026-04-04",
+    "description": "Customer Invoice Payment",
+    "amount": 360000,
+    "type": "CREDIT",
+    "balance": 3035000,
+    "category": "SALES"
+  },
+  {
+    "transaction_id": "TXN030",
+    "date": "2026-04-10",
+    "description": "Supplier Payment",
+    "amount": 170000,
+    "type": "DEBIT",
+    "balance": 2865000,
+    "category": "SUPPLIER"
+  },
+  {
+    "transaction_id": "TXN031",
+    "date": "2026-04-18",
+    "description": "Customer Invoice Payment",
+    "amount": 290000,
+    "type": "CREDIT",
+    "balance": 3155000,
+    "category": "SALES"
+  },
+  {
+    "transaction_id": "TXN032",
+    "date": "2026-04-27",
+    "description": "Payroll",
+    "amount": 100000,
+    "type": "DEBIT",
+    "balance": 3055000,
+    "category": "PAYROLL"
+  },
+
+  {
+    "transaction_id": "TXN033",
+    "date": "2026-05-05",
+    "description": "Customer Invoice Payment",
+    "amount": 370000,
+    "type": "CREDIT",
+    "balance": 3425000,
+    "category": "SALES"
+  },
+  {
+    "transaction_id": "TXN034",
+    "date": "2026-05-12",
+    "description": "Supplier Payment",
+    "amount": 175000,
+    "type": "DEBIT",
+    "balance": 3250000,
+    "category": "SUPPLIER"
+  },
+  {
+    "transaction_id": "TXN035",
+    "date": "2026-05-19",
+    "description": "Customer Invoice Payment",
+    "amount": 300000,
+    "type": "CREDIT",
+    "balance": 3550000,
+    "category": "SALES"
+  },
+  {
+    "transaction_id": "TXN036",
+    "date": "2026-05-28",
+    "description": "Office Rent",
+    "amount": 52000,
+    "type": "DEBIT",
+    "balance": 3498000,
+    "category": "OPERATIONS"
+  },
+
+  {
+    "transaction_id": "TXN037",
+    "date": "2026-06-04",
+    "description": "Customer Invoice Payment",
+    "amount": 380000,
+    "type": "CREDIT",
+    "balance": 3878000,
+    "category": "SALES"
+  },
+  {
+    "transaction_id": "TXN038",
+    "date": "2026-06-11",
+    "description": "Supplier Payment",
+    "amount": 180000,
+    "type": "DEBIT",
+    "balance": 3698000,
+    "category": "SUPPLIER"
+  },
+  {
+    "transaction_id": "TXN039",
+    "date": "2026-06-18",
+    "description": "Customer Invoice Payment",
+    "amount": 310000,
+    "type": "CREDIT",
+    "balance": 4008000,
+    "category": "SALES"
+  },
+  {
+    "transaction_id": "TXN040",
+    "date": "2026-06-26",
+    "description": "Payroll",
+    "amount": 105000,
+    "type": "DEBIT",
+    "balance": 3903000,
+    "category": "PAYROLL"
+  },
+
+  {
+    "transaction_id": "TXN041",
+    "date": "2026-07-03",
+    "description": "Customer Invoice Payment",
+    "amount": 395000,
+    "type": "CREDIT",
+    "balance": 4298000,
+    "category": "SALES"
+  },
+  {
+    "transaction_id": "TXN042",
+    "date": "2026-07-09",
+    "description": "Supplier Payment",
+    "amount": 185000,
+    "type": "DEBIT",
+    "balance": 4113000,
+    "category": "SUPPLIER"
+  },
+  {
+    "transaction_id": "TXN043",
+    "date": "2026-07-16",
+    "description": "Customer Invoice Payment",
+    "amount": 320000,
+    "type": "CREDIT",
+    "balance": 4433000,
+    "category": "SALES"
+  },
+  {
+    "transaction_id": "TXN044",
+    "date": "2026-07-24",
+    "description": "Unregistered Crypto Exchange Transfer",
+    "amount": 350000,
+    "type": "DEBIT",
+    "balance": 4083000,
+    "category": "UNKNOWN"
+  },
+
+  {
+    "transaction_id": "TXN045",
+    "date": "2026-08-03",
+    "description": "Customer Invoice Payment",
+    "amount": 405000,
+    "type": "CREDIT",
+    "balance": 4488000,
+    "category": "SALES"
+  },
+  {
+    "transaction_id": "TXN046",
+    "date": "2026-08-08",
+    "description": "Supplier Payment",
+    "amount": 190000,
+    "type": "DEBIT",
+    "balance": 4298000,
+    "category": "SUPPLIER"
+  },
+  {
+    "transaction_id": "TXN047",
+    "date": "2026-08-15",
+    "description": "Customer Invoice Payment",
+    "amount": 330000,
+    "type": "CREDIT",
+    "balance": 4628000,
+    "category": "SALES"
+  },
+  {
+    "transaction_id": "TXN048",
+    "date": "2026-08-25",
+    "description": "Massive Uninvoiced Wire Deposit",
+    "amount": 600000,
+    "type": "CREDIT",
+    "balance": 5228000,
+    "category": "UNKNOWN"
+  }
+]

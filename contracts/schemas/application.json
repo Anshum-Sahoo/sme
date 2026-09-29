@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Application",
+  "type": "object",
+  "properties": {
+    "application_id": {
+      "type": "string"
+    },
+    "business_id": {
+      "type": "string"
+    },
+    "loan_amount": {
+      "type": "number"
+    },
+    "purpose": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "PENDING_CONSENT"
+      ]
+    }
+  },
+  "required": [
+    "business_id",
+    "loan_amount",
+    "purpose"
+  ]
+}

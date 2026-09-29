@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Financial Data",
+  "type": "object",
+  "properties": {
+    "consent_id": { "type": "string" },
+    "data_source": { "type": "string", "enum": ["MOCK_AA"] },
+    "bank_transactions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "transaction_id": { "type": "string" },
+          "date": { "type": "string", "format": "date" },
+          "description": { "type": "string" },
+          "amount": { "type": "number" },
+          "type": { "type": "string", "enum": ["CREDIT", "DEBIT"] },
+          "balance": { "type": "number" },
+          "category": { "type": "string" }
+        },
+        "required": ["transaction_id", "date", "amount", "type", "balance"]
+      }
+    },
+    "gst_records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "month": { "type": "string" },
+          "reported_sales": { "type": "number" },
+          "gst_paid": { "type": "number" },
+          "filing_status": { "type": "string" }
+        },
+        "required": ["month", "reported_sales", "gst_paid", "filing_status"]
+      }
+    }
+  },
+  "required": ["consent_id", "data_source", "bank_transactions", "gst_records"]
+}
