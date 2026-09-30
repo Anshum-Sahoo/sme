@@ -4,6 +4,8 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Application as BaseApplication, ApplicationCreatePayload, RiskResult } from '@/components/bank/types';
 
+const API_BASE = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:8000';
+
 // Augment the imported Application type locally to satisfy TypeScript TS2367 checks.
 // This ensures the status field accurately represents all valid backend and frontend string literals.
 interface Application extends Omit<BaseApplication, 'status'> {
@@ -38,7 +40,7 @@ export default function BankDashboardPage() {
   const fetchRiskResultFor = async (applicationId: string) => {
     setRiskLoading(prev => ({ ...prev, [applicationId]: true }));
     try {
-      const res = await fetch(`http://localhost:8000/api/risk/${applicationId}`);
+      const res = await fetch(`${API_BASE}/api/risk/${applicationId}`);
       if (res.ok) {
         const data: RiskResult = await res.json();
         setRiskResults(prev => ({ ...prev, [applicationId]: data }));
@@ -63,7 +65,7 @@ export default function BankDashboardPage() {
   // Fetch live applications from the backend
   const loadApplications = async () => {
     try {
-      const res = await fetch('http://localhost:8000/api/applications');
+      const res = await fetch(`${API_BASE}/api/applications`);
       if (res.ok) {
         const data: Application[] = await res.json();
         // Reverse the array so the most recently created apps appear at the top
@@ -102,7 +104,7 @@ export default function BankDashboardPage() {
         purpose: newPurpose,
       };
 
-      const res = await fetch('http://localhost:8000/api/applications', {
+      const res = await fetch(`${API_BASE}/api/applications`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: json_payload_string(payload),
