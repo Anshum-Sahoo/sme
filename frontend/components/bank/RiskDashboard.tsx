@@ -3,6 +3,8 @@
 import React, { useState, useEffect } from 'react';
 import { RiskResult, ConsentStatus } from './types';
 
+const API_BASE = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:8000';
+
 interface RiskDashboardProps {
   applicationId: string;
   consentId?: string | null;
@@ -25,7 +27,7 @@ export default function RiskDashboard({
     try {
       setLoading(true);
       setError(null);
-      const res = await fetch(`http://localhost:8000/api/risk/${applicationId}`);
+      const res = await fetch(`${API_BASE}/api/risk/${applicationId}`);
       if (res.ok) {
         const data: RiskResult = await res.json();
         setRiskResult(data);
@@ -37,7 +39,7 @@ export default function RiskDashboard({
         setError(errData.detail || 'Failed to fetch risk assessment.');
       }
     } catch {
-      setError('Cannot connect to backend server at http://localhost:8000.');
+      setError(`Cannot connect to backend server at ${API_BASE}.`);
     } finally {
       setLoading(false);
     }
@@ -53,7 +55,7 @@ export default function RiskDashboard({
     try {
       setAnalyzing(true);
       setError(null);
-      const res = await fetch(`http://localhost:8000/api/risk/analyze/${applicationId}`, {
+      const res = await fetch(`${API_BASE}/api/risk/analyze/${applicationId}`, {
         method: 'POST',
       });
 
