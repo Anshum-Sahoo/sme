@@ -55,13 +55,46 @@ export default function RiskDashboard({
     try {
       setAnalyzing(true);
       setError(null);
+
+      // STEP 1 & 2: If consent is merely APPROVED, we must fetch the financial data first
+      // to transition it to DATA_READY on the backend before running risk analysis.
+      if (consentStatus === 'APPROVED') {
+        if (!consentId) {
+          setError('Consent ID is missing. Cannot fetch financial data.');
+          setAnalyzing(false);
+          return;
+        }
+
+        try {
+          const financialDataRes = await fetch(`${API_BASE}/api/financial-data/${consentId}`);
+          
+          if (!financialDataRes.ok) {
+            const errData = await financialDataRes.json().catch(() => ({}));
+            setError(errData.detail || 'Failed to fetch financial data from Account Aggregator.');
+            setAnalyzing(false);
+            return;
+          }
+          
+          // STEP 3: Financial data fetch succeeded. Inform the parent page 
+          // so it updates the displayed UI status to DATA_READY.
+          await onRefreshConsent?.();
+
+        } catch {
+          setError('Network error while fetching financial data.');
+          setAnalyzing(false);
+          return;
+        }
+      }
+
+      // STEP 4: Run the actual Risk Analysis 
+      // (Executes immediately if already DATA_READY, or sequentially after a successful fetch above)
       const res = await fetch(`${API_BASE}/api/risk/analyze/${applicationId}`, {
         method: 'POST',
       });
 
       if (res.ok) {
         const data: RiskResult = await res.json();
-        setRiskResult(data);
+        setRiskResult(data); // STEP 5: Display Result
       } else {
         const errData = await res.json().catch(() => ({}));
         setError(errData.detail || 'Risk analysis failed. Please try again.');
@@ -106,7 +139,7 @@ export default function RiskDashboard({
           </div>
           <div>
             <h3 className="font-semibold text-slate-900 text-sm md:text-base">
-              Autonomous Risk Assessment Engine
+              Deterministic Risk Assessment Engine
             </h3>
             <p className="text-xs text-slate-500">
               Deterministic Underwriting & Telemetry Scoring (0–100)
@@ -245,7 +278,7 @@ export default function RiskDashboard({
                     Recommended Credit Limit
                   </span>
                   <div className="mt-2 text-2xl md:text-3xl font-bold text-slate-900">
-                    ${riskResult.recommended_credit_limit.toLocaleString()}
+                    ₹{riskResult.recommended_credit_limit.toLocaleString()}
                   </div>
                 </div>
                 <div className="mt-3 text-xs text-slate-500 flex items-center gap-1.5">

@@ -17,6 +17,12 @@ interface SmeConsent {
   expires_at: string;
 }
 
+interface Application {
+  application_id: string;
+  loan_amount?: number;
+  purpose?: string;
+}
+
 function safeDecode(value: string): string {
   try {
     return decodeURIComponent(value);
@@ -31,6 +37,7 @@ export default function SmeConsentPage() {
   const consentId = rawId ? safeDecode(rawId) : '';
 
   const [consent, setConsent] = useState<SmeConsent | null>(null);
+  const [application, setApplication] = useState<Application | null>(null);
   const [loading, setLoading] = useState(true);
   const [notFound, setNotFound] = useState(false);
   const [acting, setActing] = useState<'approve' | 'reject' | null>(null);
@@ -56,6 +63,21 @@ export default function SmeConsentPage() {
       const data: SmeConsent = await res.json();
       setConsent(data);
       setNotFound(false);
+      
+      // Fetch related application for display logic without altering backend behavior.
+      try {
+        const appRes = await fetch(`${API_BASE}/api/applications`, { cache: 'no-store' });
+        if (appRes.ok) {
+          const apps = await appRes.json();
+          const foundApp = apps.find((a: any) => a.application_id === data.application_id);
+          if (foundApp) {
+            setApplication(foundApp);
+          }
+        }
+      } catch (err) {
+        console.error('Failed to fetch applications for SME view:', err);
+      }
+
       return true;
     } catch {
       setError('Could not connect to the backend to load the consent request.');
@@ -184,9 +206,15 @@ export default function SmeConsentPage() {
                   <dt className="text-slate-500">Application</dt>
                   <dd className="font-medium text-slate-900">{consent.application_id}</dd>
                 </div>
+                {application?.loan_amount != null && (
+                  <div className="flex justify-between gap-4">
+                    <dt className="text-slate-500">Loan Request</dt>
+                    <dd className="font-medium text-slate-900 text-right">₹{application.loan_amount.toLocaleString()}</dd>
+                  </div>
+                )}
                 <div className="flex justify-between gap-4">
                   <dt className="text-slate-500">Purpose</dt>
-                  <dd className="font-medium text-slate-900 text-right">{consent.purpose}</dd>
+                  <dd className="font-medium text-slate-900 text-right">{application?.purpose || consent.purpose}</dd>
                 </div>
                 <div className="flex justify-between gap-4">
                   <dt className="text-slate-500">Expires</dt>

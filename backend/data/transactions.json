@@ -35,7 +35,6 @@
     "balance": 525000,
     "category": "PAYROLL"
   },
-
   {
     "transaction_id": "TXN005",
     "date": "2025-10-04",
@@ -72,7 +71,6 @@
     "balance": 870000,
     "category": "OPERATIONS"
   },
-
   {
     "transaction_id": "TXN009",
     "date": "2025-11-05",
@@ -109,7 +107,6 @@
     "balance": 1180000,
     "category": "PAYROLL"
   },
-
   {
     "transaction_id": "TXN013",
     "date": "2025-12-03",
@@ -146,7 +143,6 @@
     "balance": 1510000,
     "category": "PAYROLL"
   },
-
   {
     "transaction_id": "TXN017",
     "date": "2026-01-05",
@@ -183,7 +179,6 @@
     "balance": 1900000,
     "category": "OPERATIONS"
   },
-
   {
     "transaction_id": "TXN021",
     "date": "2026-02-04",
@@ -220,7 +215,6 @@
     "balance": 2262000,
     "category": "PAYROLL"
   },
-
   {
     "transaction_id": "TXN025",
     "date": "2026-03-05",
@@ -257,7 +251,6 @@
     "balance": 2675000,
     "category": "OPERATIONS"
   },
-
   {
     "transaction_id": "TXN029",
     "date": "2026-04-04",
@@ -294,7 +287,6 @@
     "balance": 3055000,
     "category": "PAYROLL"
   },
-
   {
     "transaction_id": "TXN033",
     "date": "2026-05-05",
@@ -331,7 +323,6 @@
     "balance": 3498000,
     "category": "OPERATIONS"
   },
-
   {
     "transaction_id": "TXN037",
     "date": "2026-06-04",
@@ -368,7 +359,6 @@
     "balance": 3903000,
     "category": "PAYROLL"
   },
-
   {
     "transaction_id": "TXN041",
     "date": "2026-07-03",
@@ -405,7 +395,6 @@
     "balance": 4083000,
     "category": "UNKNOWN"
   },
-
   {
     "transaction_id": "TXN045",
     "date": "2026-08-03",

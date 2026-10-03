@@ -427,7 +427,7 @@ export default function BankDashboardPage() {
                           style={{ fontFamily: 'var(--font-geist-mono)' }}
                           className="text-sm font-semibold text-[#161c22]"
                         >
-                          ${amount.toLocaleString()}
+                          ₹{amount.toLocaleString()}
                         </span>
                       </div>
                     </div>
@@ -486,7 +486,7 @@ export default function BankDashboardPage() {
                             className="text-xs font-medium text-[#161c22]"
                           >
                             {riskResults[app.application_id]
-                              ? `$${riskResults[app.application_id].recommended_credit_limit.toLocaleString()}`
+                              ? `₹${riskResults[app.application_id].recommended_credit_limit.toLocaleString()}`
                               : '—'}
                           </span>
                         </div>
@@ -577,21 +577,24 @@ export default function BankDashboardPage() {
               )}
               <div>
                 <label className="block text-xs font-medium text-slate-700 mb-1">
-                  Business Entity / SME Name
+                  SME Profile
                 </label>
-                <input
-                  type="text"
+                <select
                   required
                   value={newBizName}
                   onChange={e => setNewBizName(e.target.value)}
-                  placeholder="e.g. ABC Traders"
-                  className="w-full h-9 px-3 rounded-lg border border-slate-300 text-xs text-slate-900 focus:outline-none focus:ring-1 focus:ring-slate-900"
-                />
+                  className="w-full h-9 px-3 rounded-lg border border-slate-300 text-xs text-slate-900 focus:outline-none focus:ring-1 focus:ring-slate-900 bg-white"
+                >
+                  <option value="" disabled>Select SME Profile</option>
+                  <option value="SME001">SME001 — Baseline SME</option>
+                  <option value="SME002">SME002 — Healthy SME</option>
+                  <option value="SME003">SME003 — Higher-Risk SME</option>
+                </select>
               </div>
 
               <div>
                 <label className="block text-xs font-medium text-slate-700 mb-1">
-                  Requested Loan Amount ($ / ₹)
+                  Requested Loan Amount (₹)
                 </label>
                 <input
                   type="number"

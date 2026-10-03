@@ -12,7 +12,7 @@ export default function Home() {
         
         <div className="flex gap-6">
           <Link 
-            href="/bank/dashboard"
+            href="/bank"
             className="px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
           >
             Bank Login

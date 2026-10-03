@@ -252,13 +252,18 @@ def get_financial_data(consent_id: str):
                    f"Financial data is only available after approval.",
         )
 
+    # Resolve the SME profile from the application's business_id
+    # (NOT from application_id). Unknown IDs fall back to SME001 in Mock AA.
+    business_id = _business_id_for_application(consent["application_id"])
+
     try:
-        data = mock_aa.fetch_financial_data(consent_id)
+        data = mock_aa.fetch_financial_data(consent_id, business_id)
     except FileNotFoundError:
         raise HTTPException(
             status_code=500,
             detail="Synthetic data files not found in backend/data/. "
-                   "Ensure transactions.json and gst.json exist.",
+                   "Ensure transactions.json, gst.json and the sme00N_* "
+                   "profile files exist.",
         )
 
     # Update both consent and application to DATA_READY
@@ -294,8 +299,11 @@ def run_risk_analysis(application_id: str):
             detail=f"Consent status is '{consent['status']}'. Financial data must be available before running analysis.",
         )
 
+    # Profile selection is driven by the application's business_id.
+    business_id = applications_db[application_id]["business_id"]
+
     try:
-        financial_data = mock_aa.fetch_financial_data(consent["consent_id"])
+        financial_data = mock_aa.fetch_financial_data(consent["consent_id"], business_id)
     except FileNotFoundError:
         raise HTTPException(
             status_code=500,
@@ -332,9 +340,15 @@ def get_risk_result(application_id: str):
 # Internal helpers
 # =====================================================================
 
+def _business_id_for_application(application_id: str) -> Optional[str]:
+    """Return the business_id of an application (None if unknown)."""
+    application = applications_db.get(application_id)
+    return application["business_id"] if application else None
+
+
 def _find_consent_for_application(application_id: str) -> Optional[dict]:
     """Return the most recent consent record for an application, if any."""
     for consent in reversed(list(consents_db.values())):
         if consent["application_id"] == application_id:
             return consent
-    return None
+    return None

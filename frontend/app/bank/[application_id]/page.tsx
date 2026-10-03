@@ -268,9 +268,9 @@ function ApplicationDetailContent({ params }: PageProps) {
                 <span>•</span>
                 <span>Purpose: <strong className="text-slate-800">{purpose ?? 'Not available'}</strong></span>
                 <span>•</span>
-                <span>Facility Type: <strong className="text-slate-800">{facilityType ?? 'Not available'}</strong></span>
+                <span>Facility Type: <strong className="text-slate-800">{facilityType ?? 'Not specified'}</strong></span>
                 <span>•</span>
-                <span>Grade: <strong className="text-slate-800">{grade ?? 'Not available'}</strong></span>
+                <span>Grade: <strong className="text-slate-800">{grade ?? 'Not assessed'}</strong></span>
               </div>
             </div>
 
@@ -279,7 +279,7 @@ function ApplicationDetailContent({ params }: PageProps) {
                 Requested Amount
               </span>
               <div className="text-2xl md:text-3xl font-extrabold text-[#161c22] mt-0.5">
-                {requestedAmount != null ? `$${requestedAmount.toLocaleString()}` : 'Not available'}
+                {requestedAmount != null ? `₹${requestedAmount.toLocaleString()}` : 'Not available'}
               </div>
             </div>
           </div>

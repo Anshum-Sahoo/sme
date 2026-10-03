@@ -1,74 +1,74 @@
 [
   {
     "month": "2025-09",
-    "reported_sales": 490000,
-    "gst_paid": 88200,
+    "reported_sales": 565000,
+    "gst_paid": 101700,
     "filing_status": "FILED"
   },
   {
     "month": "2025-10",
-    "reported_sales": 510000,
-    "gst_paid": 91800,
+    "reported_sales": 604000,
+    "gst_paid": 108720,
     "filing_status": "FILED"
   },
   {
     "month": "2025-11",
-    "reported_sales": 505000,
-    "gst_paid": 90900,
+    "reported_sales": 552000,
+    "gst_paid": 99360,
     "filing_status": "FILED"
   },
   {
     "month": "2025-12",
-    "reported_sales": 540000,
-    "gst_paid": 97200,
+    "reported_sales": 632000,
+    "gst_paid": 113760,
     "filing_status": "FILED"
   },
   {
     "month": "2026-01",
-    "reported_sales": 520000,
-    "gst_paid": 93600,
+    "reported_sales": 581000,
+    "gst_paid": 104580,
     "filing_status": "FILED"
   },
   {
     "month": "2026-02",
-    "reported_sales": 480000,
-    "gst_paid": 86400,
+    "reported_sales": 538000,
+    "gst_paid": 96840,
     "filing_status": "FILED"
   },
   {
     "month": "2026-03",
-    "reported_sales": 560000,
-    "gst_paid": 100800,
+    "reported_sales": 640000,
+    "gst_paid": 115200,
     "filing_status": "FILED"
   },
   {
     "month": "2026-04",
-    "reported_sales": 530000,
-    "gst_paid": 95400,
+    "reported_sales": 596000,
+    "gst_paid": 107280,
     "filing_status": "FILED"
   },
   {
     "month": "2026-05",
-    "reported_sales": 515000,
-    "gst_paid": 92700,
+    "reported_sales": 612000,
+    "gst_paid": 110160,
     "filing_status": "FILED"
   },
   {
     "month": "2026-06",
-    "reported_sales": 500000,
-    "gst_paid": 90000,
+    "reported_sales": 562000,
+    "gst_paid": 101160,
     "filing_status": "FILED"
   },
   {
     "month": "2026-07",
-    "reported_sales": 495000,
-    "gst_paid": 89100,
+    "reported_sales": 620000,
+    "gst_paid": 111600,
     "filing_status": "FILED"
   },
   {
     "month": "2026-08",
-    "reported_sales": 510000,
-    "gst_paid": 91800,
+    "reported_sales": 598000,
+    "gst_paid": 107640,
     "filing_status": "FILED"
   }
 ]
